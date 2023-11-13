@@ -1,0 +1,40 @@
+/* Media queries desktop */
+@mixin desktopVersion {
+    @media screen and (min-width : 1024px) {
+        @content;
+    }
+}
+
+/* Media queries tablette */
+@mixin tabletteVersion {
+    @media screen and (min-width : 767px) and (max-width : 1024px) {
+        @content;
+    }
+}
+
+/* Ombres des card */
+@mixin cardShadow{
+    box-shadow: O 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* Gradinet de la couleur principal du site */
+@mixin mainLinearGradientBackground{
+    background: linear-gradient(#9356DC, #FF79DA);
+}
+
+/* Propriétés de base des bouttons principal */
+@mixin mainButton{
+    width: 13.6rem;
+    height: 3.13rem;
+    border-radius: 25px;
+    color: white;
+    border-style: none;
+}
+
+/* Animation de boutton principal lors du hover */
+@mixin btnMainAnimation{
+    background: linear-gradient(lighten(#9356DC,5),lighten(#FF79DA,5));
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: opacity 250ms;
+}

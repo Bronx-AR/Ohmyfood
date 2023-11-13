@@ -1,0 +1,99 @@
+@import "../utils/variables.scss";
+@import "../utils/mixins.scss";
+
+/* Section Réservation */
+.reservation{
+    background-color: $tertiaryBackgroundColor;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+
+        &_TextAcceuil h2 {
+            padding: 39px 58px 0px 58px;
+        }
+
+        &_TextAcceuil p {
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+}
+
+/* Section Fonctionnement */
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    padding: 0 17px 68px 35px;
+    gap: 25px;
+
+    h2{
+        @include tabletteVersion{
+            text-align: center;
+        }
+    }
+
+    @include desktopVersion{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    &_wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @include tabletteVersion{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktopVersion{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+/*Section Restaurants */
+#restaurants{
+    width: 100%;
+    background-color: $tertiaryBackgroundColor;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 30px;
+
+    h2{
+        @include tabletteVersion{
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+    }
+
+    @include desktopVersion{
+        padding-left: 10%;
+        padding-right: 0%;
+    }
+}
+
+.restaurants_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+    width: 100%;
+    margin-bottom: 80px;
+    @include tabletteVersion{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    @include desktopVersion{
+        flex-direction: row;
+        overflow: scroll;
+        gap: 40px;
+    }
+}

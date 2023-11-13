@@ -1,0 +1,82 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+.footer-index{
+    margin-top: -80px;
+}
+
+footer{
+    color:$footerTextColor;
+    width: 100%;
+    background-color: #353535;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: -80px;
+
+    @include desktopVersion{
+        margin-top: 50px;    
+    }
+   
+    .footer__wrapper{
+        width: 100%;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: column;
+
+        @include tabletteVersion{
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            padding-left: 0px;
+            gap: 10px;
+        }
+
+        @include desktopVersion{
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: baseline;
+            gap: 30px;
+            padding-right: 9%;
+        }
+
+        a{
+            color: $footerTextColor;
+        }
+       
+        .footer__icone{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 16px;
+        } 
+
+        h3{
+            font-family: 'Shrikhand', 'cursive';
+            margin-top: 0px;
+        }
+
+        ul, li{
+            color: $footerTextColor;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding-left: 0;
+            line-height: 30px;
+            font-weight: 200;
+
+            @include tabletteVersion{
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            @include desktopVersion{
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }  
+        }
+    }
+}
