@@ -14,48 +14,41 @@
     <div class="wrapper">
         <header id="header">
             <div class="header_logo">
-                <img class="header_img" src="./assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
+                <img class="header__img" src="assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
+            </div>
+            <div class="header__location">
+                <i class="fa-solid fa-location-dot location__icon"></i>
+                <p class="location__text">Paris, Belleville</p>
             </div>
         </header>
-        <main>
-            <div class="localisation">
-                <form method="post" class="localisation_formulaire">
-                    <div class="recherche_formulaire_label">
-                        <label for="localisation"><i class="fa-solid fa-location-dot"></i</label>
-                    </div>
-                    <input type="search" name="localisation" id="localisation" placeholder="Paris, Belleville">
-                </form>
-            </div>
-            <section class="reservation">
-                <div class="reservation_TextAcceuil">
-                    <h2>Réservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins</p>
+
+        <main class="main-container">
+            <section class="main-section">
+                <div class="main-content">
+                    <h1 class="main-text__title">Réservez le menu qui vous convient</h1>
+                    <p class="main-txt__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins </p>
                 </div>
-                <a href="#restaurants">
-                    <div class="btn-main">
-                        Explorer nos restaurants
-                    </div>
-                </a>
+                <div class="button">
+                    <a href="#">Explorer nos restaurants</a>
+                </div>
             </section>
+
             <section class="fonctionnement">
-                <h2>Fonctionnement</h2>
-                <div class="fonctionnement_wrapper">
-                    <div class="fonctionnement_card">
-                        <div class="fonctionnement_card_number">1</div>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
+                <h2 class="fonctionnement__title">fonctionnement</h2>
+                <ul class="fonctionnement-contennt">
+                    <li class="fonctionnement-contennt__list">
+                        <i class="fa-solid fa-list-ul"></i>
                         <p>Choisissez un restaurant</p>
-                    </div>
-                    <div class="fonctionnement_card">
-                        <div class="fonctionnement_card_number">2</div>
+                    </li>
+                    <li class="fonctionnement-contennt__list">
                         <i class="fa-solid fa-list-ul"></i>
                         <p>Composez votre menu</p>
-                    </div>
-                    <div class="fonctionnement_card">
-                        <div class="fonctionnement_card_number">3</div>
-                        <i class="fa-solid fa-store"></i>
-                        <p>Dégustez au restaurnat</p>
-                    </div>
-                </div>
+                    </li>
+                    <li class="fonctionnement-contennt__list">
+                        <i class="fa-solid fa-list-ul"></i>
+                        <p>Dégustez au restaurant</p>
+                    </li>
+                </ul>        
             </section>
             <section id="restaurants">
                 <div class="restaurants-container">
