@@ -1,24 +1,6 @@
 @import "../utils/mixins.scss";
 @import "../utils/variables.scss";
-
-body{
-    width: 100%;
-    margin: auto;
-
-    .wrapper{
-        max-width: 767px;
-        margin: auto;
-        background-color: white;
-        @include tabletteVersion{
-            max-width: 767px;
-            width: 100%;
-        }
-        @include desktopVersion{
-            max-width: 1024px;
-            width: 100%;
-        }
-    }
-}
+@import "../utils/placeholder.scss";
 
 *{
     box-sizing: border-box;

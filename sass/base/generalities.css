@@ -1,27 +1,6 @@
 /* Media queries desktop */
 /* Media queries tablette */
-body {
-  width: 100%;
-  margin: auto;
-}
-body .wrapper {
-  max-width: 767px;
-  margin: auto;
-  background-color: white;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  body .wrapper {
-    max-width: 767px;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body .wrapper {
-    max-width: 1024px;
-    width: 100%;
-  }
-}
-
+/* Shadow & Radius */
 * {
   box-sizing: border-box;
 }
