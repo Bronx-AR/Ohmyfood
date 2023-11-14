@@ -11,9 +11,11 @@ body{
         background-color: white;
         @include tabletteVersion{
             max-width: 767px;
+            width: 100%;
         }
         @include desktopVersion{
             max-width: 1024px;
+            width: 100%;
         }
     }
 }
