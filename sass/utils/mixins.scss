@@ -17,3 +17,30 @@
 @mixin shadow_header {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin menu-title{
+    .menu__title{
+        font-size: 16px;
+        font-weight: 300;
+        .border-title--green{
+            border-bottom: 3px solid $menuHightlightColor;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    }
+}

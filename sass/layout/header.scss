@@ -1,14 +1,29 @@
-@import "../utils/variables.scss";
-@import "../utils/mixins.scss";
-@import "../utils/placeholder.scss";
-
 /*Header Acceuil*/
 
-.header_logo{
+.header{
+    width: 100%;
+    @include flex-column;
+    @include center;
     position: relative;
-    margin: 0%;
-    height: 63px;
-    @extend %flex-center;
-    background-color: white;
-    @include shadow_header;
+    .header_logo{
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0.15);
+        z-index: 1;
+        .header__img{
+            width: 162px;
+            padding: 14px 0 8px 0;
+        }
+    }
+    .header__location{
+        width: 100%;
+        height: 50px;
+        background-color: $tertiaryBackgroundColor;
+        @include flex-row;
+        @include center;
+        .location_icon{
+            position: relative;
+            right: 18px;
+        }
+    }
 }
