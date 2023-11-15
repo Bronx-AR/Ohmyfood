@@ -10,5 +10,5 @@
     height: 63px;
     @extend %flex-center;
     background-color: white;
-    @include shadow-header;
+    @include shadow_header;
 }
