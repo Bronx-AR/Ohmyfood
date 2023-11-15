@@ -12,8 +12,7 @@
 }
 
 img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 ul li {
@@ -82,4 +81,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
