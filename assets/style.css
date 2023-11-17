@@ -79,11 +79,16 @@ p {
   height: 50px;
   background-color: #EAEAEA;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  flex-shrink: 0;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.header .header__location .location_icon {
+.header .header__location .location__icon {
   position: relative;
   right: 18px;
 }
@@ -133,17 +138,17 @@ p {
   gap: 27px;
   width: 100%;
 }
-.bienvenue .bienvenue_Text_Acceuil {
+.bienvenue .bienvenue_TextAcceuil {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 10px;
 }
-.bienvenue .bienvenue_Text_Acceuil .bienvenue_text_tittle {
+.bienvenue .bienvenue_TextAcceuil .bienvenue_text_tittle {
   padding: 0px 20px;
   font-weight: 700;
 }
-.bienvenue .bienvenue_Text_Acceuil .bienvenue_text_txt {
+.bienvenue .bienvenue_TextAcceuil .bienvenue_text_txt {
   font-weight: 300;
   font-size: 18px;
   color: #353535;
@@ -285,6 +290,14 @@ p {
   opacity: 0;
   transition: visibility 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+}
+.restaurants .cards .cards__card .hearts:hover .empty-heart {
+  visibility: hidden;
+  opacity: 0;
+}
+.restaurants .cards .cards__card .hearts:hover .filled-heart {
+  visibility: visible;
+  opacity: 1;
 }
 .restaurants .nouveau::after {
   content: "Nouveau";

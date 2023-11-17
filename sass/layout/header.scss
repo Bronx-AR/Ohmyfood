@@ -19,9 +19,14 @@
         width: 100%;
         height: 50px;
         background-color: $tertiaryBackgroundColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        flex-shrink: 0;
         @include flex-row;
         @include center;
-        .location_icon{
+        .location__icon{
             position: relative;
             right: 18px;
         }

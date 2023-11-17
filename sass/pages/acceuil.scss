@@ -7,7 +7,7 @@
     text-align: center;
     gap: 27px;
     width: 100%;
-    .bienvenue_Text_Acceuil{
+    .bienvenue_TextAcceuil{
         @include flex-column;
         text-align: center;
         gap: 10px;
@@ -132,7 +132,16 @@
                     transition: opacity .5s ease-in-out;
 
                 }
-              
+                &:hover{
+                    .empty-heart{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                .filled-heart{
+                    visibility: visible;
+                    opacity: 1;
+                    }
+                }
             }                   
         }
     }  
