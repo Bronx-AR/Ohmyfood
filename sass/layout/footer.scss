@@ -4,6 +4,15 @@
     gap: 14px;
     background-color: #353535;
     padding: 22px 20px 33px 20px;
+    @include desktopVersion{
+        height: 114px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 71px;
+        padding-right: 125px;
+    }
     .footer__title{
         font-family: 'Shrikhand';
         font-weight: 400;
@@ -13,6 +22,10 @@
     .footer__content{
         @include flex-column;
         gap: 10px;
+        @include desktopVersion{
+            @include flex-row;
+            gap: 40px;
+        }
         .footer__list{
             .footer__link{
                 @include flex-row;

@@ -7,13 +7,22 @@
     text-align: center;
     gap: 27px;
     width: 100%;
+    @include desktopVersion{
+        gap: 30px;
+    }
     .bienvenue_TextAcceuil{
         @include flex-column;
         text-align: center;
         gap: 10px;
+        @include desktopVersion{
+            gap: 25px;
+        }
         .bienvenue_text_tittle{
             padding: 0px 20px;
             font-weight: 700;
+            @include desktopVersion{
+                font-size: 40px;
+            }
         }
         .bienvenue_text_txt{
             font-weight: 300;
@@ -31,6 +40,17 @@
     padding: 48px 25px;
     max-width: 1440px;
     @include flex-column;
+    @include tabletteVersion{
+        padding: 48px 125px;
+    }
+    @include desktopVersion{
+        height: 262px;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+    }
     .fonctionnement_tittle{
         margin-bottom: 26px;
     }
@@ -39,6 +59,12 @@
         gap: 25px;
         padding: 0px 12px;
         counter-reset: counter;
+        @include desktopVersion{
+            @include flex-row;
+            width: 100%;
+            margin: auto;
+            gap: 50px;
+        }
         .fonctionnement__card{
             @include flex-column;
             @include center;
@@ -50,6 +76,9 @@
             position: relative;
             transition: background-color .4s ease-in-out;
             transition: box-shadow .4s ease-in-out;
+            @include desktopVersion{
+                width: 33%;
+            }
             &::before{
                 counter-increment: counter 1;
                 content: counter(counter);
@@ -82,14 +111,47 @@
 .restaurants{
     background-color: #F7F7F7;
     padding: 48px 20px;
+    @include desktopVersion{
+        height: 425px;
+        width: 100%;
+    }
+    .restaurants_container {
+        @include desktopVersion{
+            width: 100%;
+            max-width: 1440px;
+            margin: auto;
+        }
+    }
     .restaurants_title{
         padding-bottom: 25px;
+        @include tabletteVersion{
+            padding-left: 3.5%;
+        }
+        @include desktopVersion{
+            padding-left: 0;
+        }
     }
     .cards{
         @include flex-column;
         gap: 20px;
+        @include tabletteVersion{
+            @include flex-row;
+            @include center;
+            flex-wrap: wrap;
+        }
+        @include desktopVersion{
+            flex-wrap: nowrap;
+            gap: 15%;
+            width: 100%;
+        }
         .cards__card{
             position: relative;
+            @include tabletteVersion{
+                width: 45%;
+            }
+            @include desktopVersion{
+                width: 33%;
+            }
             .card__link{
                 width: 100%;
                 height: 251px;

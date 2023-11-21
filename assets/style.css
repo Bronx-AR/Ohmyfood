@@ -101,6 +101,17 @@ p {
   background-color: #353535;
   padding: 22px 20px 33px 20px;
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 71px;
+    padding-right: 125px;
+  }
+}
 .footer .footer__title {
   font-family: "Shrikhand";
   font-weight: 400;
@@ -111,6 +122,13 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer__content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .footer .footer__content .footer__list .footer__link {
   display: flex;
@@ -138,15 +156,30 @@ p {
   gap: 27px;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .bienvenue {
+    gap: 30px;
+  }
+}
 .bienvenue .bienvenue_TextAcceuil {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 10px;
 }
+@media screen and (min-width: 1024px) {
+  .bienvenue .bienvenue_TextAcceuil {
+    gap: 25px;
+  }
+}
 .bienvenue .bienvenue_TextAcceuil .bienvenue_text_tittle {
   padding: 0px 20px;
   font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .bienvenue .bienvenue_TextAcceuil .bienvenue_text_tittle {
+    font-size: 40px;
+  }
 }
 .bienvenue .bienvenue_TextAcceuil .bienvenue_text_txt {
   font-weight: 300;
@@ -182,6 +215,21 @@ p {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement {
+    padding: 48px 125px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    height: 262px;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+  }
+}
 .fonctionnement .fonctionnement_tittle {
   margin-bottom: 26px;
 }
@@ -191,6 +239,15 @@ p {
   gap: 25px;
   padding: 0px 12px;
   counter-reset: counter;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement .fonctionnement__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    gap: 50px;
+  }
 }
 .fonctionnement .fonctionnement__wrapper .fonctionnement__card {
   display: flex;
@@ -205,6 +262,11 @@ p {
   position: relative;
   transition: background-color 0.4s ease-in-out;
   transition: box-shadow 0.4s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement .fonctionnement__wrapper .fonctionnement__card {
+    width: 33%;
+  }
 }
 .fonctionnement .fonctionnement__wrapper .fonctionnement__card::before {
   counter-increment: counter 1;
@@ -237,16 +299,65 @@ p {
   background-color: #F7F7F7;
   padding: 48px 20px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    height: 425px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .restaurants_container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 .restaurants .restaurants_title {
   padding-bottom: 25px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurants .restaurants_title {
+    padding-left: 3.5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .restaurants_title {
+    padding-left: 0;
+  }
 }
 .restaurants .cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurants .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .cards {
+    flex-wrap: nowrap;
+    gap: 15%;
+    width: 100%;
+  }
+}
 .restaurants .cards .cards__card {
   position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurants .cards .cards__card {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .cards .cards__card {
+    width: 33%;
+  }
 }
 .restaurants .cards .cards__card .card__link {
   width: 100%;
