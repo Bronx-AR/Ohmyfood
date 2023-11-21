@@ -55,7 +55,6 @@ p {
   font-size: 1.06rem;
 }
 
-/*Header Acceuil*/
 .header {
   width: 100%;
   display: flex;
@@ -78,11 +77,6 @@ p {
   width: 100%;
   height: 50px;
   background-color: #EAEAEA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 17px;
-  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -151,7 +145,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 39px 30px;
-  background-color: #F7F7F7;
+  background-color: #EAEAEA;
   text-align: center;
   gap: 27px;
   width: 100%;
@@ -210,89 +204,38 @@ p {
 }
 
 .fonctionnement {
-  padding: 48px 25px;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .fonctionnement {
-    padding: 48px 125px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .fonctionnement {
-    height: 262px;
-    padding-right: 0;
-    padding-left: 0;
-    width: 100%;
-    max-width: 1024px;
-    margin: auto;
-  }
-}
-.fonctionnement .fonctionnement_tittle {
-  margin-bottom: 26px;
-}
-.fonctionnement .fonctionnement__wrapper {
+  padding: 0 17px 68px 35px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding: 0px 12px;
-  counter-reset: counter;
 }
-@media screen and (min-width: 1024px) {
-  .fonctionnement .fonctionnement__wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: auto;
-    gap: 50px;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement h2 {
+    text-align: center;
   }
 }
-.fonctionnement .fonctionnement__wrapper .fonctionnement__card {
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+.fonctionnement__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 72.38px;
-  border-radius: 20px;
-  background-color: #f6f6f6;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  position: relative;
-  transition: background-color 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
+  gap: 25px;
 }
-@media screen and (min-width: 1024px) {
-  .fonctionnement .fonctionnement__wrapper .fonctionnement__card {
-    width: 33%;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
-.fonctionnement .fonctionnement__wrapper .fonctionnement__card::before {
-  counter-increment: counter 1;
-  content: counter(counter);
-  position: relative;
-  left: -10px;
-  height: 24px;
-  width: 24px;
-  background-color: #9356DC;
-  color: #FFF;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fonctionnement .fonctionnement__wrapper .fonctionnement__card i {
-  position: relative;
-  right: 23px;
-  color: #7E7E7E;
-}
-.fonctionnement .fonctionnement__wrapper .fonctionnement__card:hover {
-  background-color: #F5EDFF;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-}
-.fonctionnement .fonctionnement__wrapper .fonctionnement__card:hover i {
-  color: #9356DC;
+@media screen and (min-width: 1024px) {
+  .fonctionnement__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .restaurants {
@@ -341,7 +284,7 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .restaurants .cards {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 15%;
     width: 100%;
   }
@@ -422,6 +365,86 @@ p {
   padding: 7px 10px;
   border-radius: 2px;
   z-index: 2;
+}
+
+.localisation {
+  width: 100%;
+  height: 50px;
+  background-color: #D2D2D2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.localisation form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  gap: 10px;
+}
+.localisation form input {
+  border-style: none;
+  background-color: #D2D2D2;
+}
+.localisation form input::focus {
+  outline: none;
+}
+.localisation form ::placeholder {
+  color: black;
+  font-size: 1rem;
+}
+
+.fonctionnement__card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  height: 75px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #EAEAEA;
+  color: black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.fonctionnement__card p {
+  font-weight: 500;
+}
+.fonctionnement__card__number {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: white;
+  font-size: 0.9rem;
+  position: absolute;
+  left: -0.8rem;
+  border-radius: 50%;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement__card:hover {
+  color: #9356DC;
+}
+.fonctionnement__card:hover::after {
+  opacity: 1;
+}
+.fonctionnement__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: #FF79DA;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
