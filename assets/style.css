@@ -284,8 +284,7 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .restaurants .cards {
-    flex-wrap: wrap;
-    gap: 15%;
+    flex-direction: row;
     width: 100%;
   }
 }

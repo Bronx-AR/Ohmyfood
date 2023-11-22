@@ -102,8 +102,7 @@
             flex-wrap: wrap;
         }
         @include desktopVersion{
-            flex-wrap: wrap;
-            gap: 15%;
+            flex-direction: row;
             width: 100%;
         }
         .cards__card{
