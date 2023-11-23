@@ -51,3 +51,79 @@
         border-radius: 20px;
     }   
 }
+
+.menu-card{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    @include cardShadow;
+    overflow: hidden;
+    animation: animationMenu 500ms both;
+    @for $i from 1 through $numPlats{
+        &--#{$i}{
+            animation-delay:$menuAnimDelay *$i;
+        }
+    }
+
+    &:hover > .card-active{
+        transform: translateX(0);
+    }
+
+    .card-inactive{ 
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        overflow: hidden;
+        &__title{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            h3{
+                margin-top: 0px;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: -10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            p{
+                font-size: 15px;
+                font-weight: 300;
+                margin-bottom: 0px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        
+    }
+
+    .card-active{
+        display: flex;
+        gap: 10px;
+        transform: translateX(50px);
+        transition: transform 400ms ease-in-out;
+
+        &__price{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: -8px;  
+        }
+
+        &__check-box{
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:$menuHightlightColor;
+            color: white;
+            border-radius: 0 15px 15px 0;
+        }  
+    }
+}

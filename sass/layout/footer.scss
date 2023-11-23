@@ -1,45 +1,79 @@
-.footer{
-    @include flex-column;
-    justify-content: space-between;
-    gap: 14px;
+.footer-index{
+    margin-top: -80px;
+}
+
+footer{
+    width: 100%;
     background-color: #353535;
-    padding: 22px 20px 33px 20px;
+    color:$footerTextColor;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: -80px;
+
     @include desktopVersion{
-        height: 114px;
+        margin-top: 50px;    
+    }
+   
+    .footer__wrapper{
+        width: 100%;
+        padding-left: 25px;
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 71px;
-        padding-right: 125px;
-    }
-    .footer__title{
-        font-family: 'Shrikhand';
-        font-weight: 400;
-        font-size: 18px;
-        color: #FFF;
-    }
-    .footer__content{
-        @include flex-column;
-        gap: 10px;
-        @include desktopVersion{
-            @include flex-row;
-            gap: 40px;
+        flex-direction: column;
+
+        @include tabletteVersion{
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            padding-left: 0px;
+            gap: 10px;
         }
-        .footer__list{
-            .footer__link{
-                @include flex-row;
-                justify-content: flex-start;
-                gap: 11px;
-                color: #FFF;
-                .footer__icon{
-                    width: 11px;
-                    height: 13px;
-                }
-                p{
-                    padding-left: 10px;
-                }
-            }            
+
+        @include desktopVersion{
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: baseline;
+            gap: 30px;
+            padding-right: 9%;
+        }
+
+        a{
+            color: $footerTextColor;
+        }
+       
+        .footer__icone{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 16px;
+        } 
+
+        h3{
+            font-family: 'Shrikhand', 'cursive';
+            margin-top: 0px;
+        }
+
+        ul, li{
+            color: $footerTextColor;
+            margin: 0;
+            padding-left: 0;
+            line-height: 30px;
+            font-weight: 200;
+            display: flex;
+            flex-direction: column;
+
+            @include tabletteVersion{
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            @include desktopVersion{
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }  
         }
     }
 }
