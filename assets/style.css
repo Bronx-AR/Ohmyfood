@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Media queries desktop */
 /* Media queries tablette */
 /* Shadow & Radius */
@@ -625,6 +626,40 @@ p {
   overflow: visible;
   padding-bottom: 13px;
   border-bottom: solid 3px #99E2D0;
+}
+
+/* Modifier la taille du loader ici */
+/* Ajouter le chemin vers votre image */
+/* Styles du loader */
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  background-image: url("../utils/10602629_42350.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  display: none; /* Masquer le loader par défaut */
+}
+
+/* Animation de rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Afficher le loader lorsque la page est en cours de chargement */
+body.loading .loader {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
