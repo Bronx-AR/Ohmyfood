@@ -72,9 +72,8 @@
 
 .restaurants{
     background-color: #F7F7F7;
-    padding: 48px 20px;
+    padding: 20px 10% 20px 10%;
     @include desktopVersion{
-        height: 425px;
         width: 100%;
     }
     .restaurants_container {
@@ -104,6 +103,9 @@
         @include desktopVersion{
             flex-direction: row;
             width: 100%;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            column-gap: 100px;
         }
         .cards__card{
             position: relative;
@@ -111,7 +113,7 @@
                 width: 45%;
             }
             @include desktopVersion{
-                width: 33%;
+                width: 43%;
             }
             .card__link{
                 width: 100%;
@@ -140,28 +142,21 @@
                     position: absolute;
                     right: 25px;
                     top: -50px;
-                    visibility: visible;
                     opacity: 1;
-                    transition: visibility .4s ease-in-out;
-                    transition: opacity .4s ease-in-out;
                 }
                 .filled-heart{
-                    visibility: hidden;
                     position: absolute;
                     right: 25px;
                     top: -50px;
                     opacity: 0;
-                    transition: visibility .5s ease-in-out;
                     transition: opacity .5s ease-in-out;
 
                 }
                 &:hover{
                     .empty-heart{
-                        visibility: hidden;
                         opacity: 0;
                     }
                 .filled-heart{
-                    visibility: visible;
                     opacity: 1;
                     }
                 }
