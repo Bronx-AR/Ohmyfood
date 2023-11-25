@@ -55,7 +55,7 @@ p {
   font-size: 1.06rem;
 }
 
-.header {
+#header {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -63,17 +63,17 @@ p {
   align-items: center;
   position: relative;
 }
-.header .header-logo {
+#header .header-logo {
   width: 100%;
   text-align: center;
   box-shadow: 0px 2px 4px rgb(0, 0, 0);
   z-index: 1;
 }
-.header .header-logo .header__img {
+#header .header-logo .header__img {
   width: 162px;
   padding: 14px 0 8px 0;
 }
-.header .header__location {
+#header .header__location {
   width: 100%;
   height: 50px;
   background-color: #EAEAEA;
@@ -82,7 +82,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.header .header__location .location__icon {
+#header .header__location .location__icon {
   position: relative;
   right: 18px;
 }
@@ -218,7 +218,7 @@ p {
   flex-direction: column;
   gap: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (min-width: 1023px) {
   .fonctionnement h2 {
     text-align: center;
   }
@@ -234,7 +234,7 @@ p {
   flex-direction: column;
   gap: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (min-width: 1023px) {
   .fonctionnement__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -267,7 +267,7 @@ p {
 .restaurants .restaurants_title {
   padding-bottom: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (min-width: 1023px) {
   .restaurants .restaurants_title {
     padding-left: 3.5%;
   }
@@ -282,7 +282,7 @@ p {
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (min-width: 1023px) {
   .restaurants .cards {
     display: flex;
     flex-direction: row;
@@ -300,7 +300,7 @@ p {
 .restaurants .cards .cards__card {
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (min-width: 1023px) {
   .restaurants .cards .cards__card {
     width: 45%;
   }
@@ -560,7 +560,7 @@ p {
   position: relative;
   top: -80px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (min-width: 1023px) {
   .menu__wrapper {
     width: 80%;
     margin: auto;
