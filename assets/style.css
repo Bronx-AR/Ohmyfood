@@ -293,8 +293,11 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .restaurants .cards {
+    display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 .restaurants .cards .cards__card {
