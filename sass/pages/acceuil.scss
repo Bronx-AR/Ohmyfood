@@ -102,9 +102,8 @@
             flex-wrap: wrap;
         }
         @include desktopVersion{
-            @include flex-row;
-            @include center;
-            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
         }
         .cards__card{
             position: relative;
