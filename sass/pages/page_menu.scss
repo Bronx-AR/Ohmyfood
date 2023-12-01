@@ -1,75 +1,100 @@
-.menu__wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    padding:32px 0 53px 0;
-    border-radius: 40px 40px 0 0 ;
-    background-color: $mainBackgroundColor;
-    position: relative;
-    top: -80px;
+main {
+    @include tabletteVersion {
+        background-color: #ffffff;
+    }
 
-    @include tabletteVersion{
+    @include desktopVersion {
+        background-color: #ffffff;
+    }
+}
+
+.main__menu {
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+
+    @include tabletteVersion {
         width: 80%;
         margin: auto;
-        padding-left: 5%;
-        padding-right: 5%;
+        margin-top: -60px;
     }
 
-    @include desktopVersion{
-        width: 70%;
+    @include desktopVersion {
+        width: 80%;
         margin: auto;
-        top:50px;    
+        margin-top: -60px;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 17px 10px;
+
+    @include tabletteVersion {
+        width: 50%;
+        margin: auto;
     }
 
-    h1{
-        font-size: 1.65rem;
-        padding-left: 0px;
-        margin-bottom: 15px;
+    @include desktopVersion {
+        width: 40%;
+        margin: auto;
+        justify-content: center;
+        gap: 30px;
     }
-  
-    .restaurant__card__content{
-        @include desktopVersion{
-            justify-content: center;
-            gap: 30px;
+
+    .heart {
+        @include desktopVersion {
+            right: 0.5rem;
         }
     }
 }
 
-.menu-image{
-    width: 100%;
-    height: 275px; 
-    img{
-        width: 100%;
-        height: 275px;
-
-        @include desktopVersion{
-            height: 375px;
-        }  
-    }
-}
-
-.menu-card-wrapper{
+.menuitem {
+    background-color: #ffffff;
+    margin-bottom: 12px;
+    padding: 11px;
+    box-shadow: 0px 4px 15px rgba(0,0,0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 17px;
-    padding-right:17px;
-    background-color: $mainBackgroundColor;
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
-    @include desktopVersion{
-        padding-left: 15%;
-        padding-right: 15%;
-    }  
+    &__list {
+        white-space: nowrap;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    &__price {
+        align-self: flex-end;
+    }
+
 }
 
-.course{
-    margin-top: 40px;
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    width: 40px;
-    overflow: visible;
-    padding-bottom:13px ;
-    border-bottom: solid 3px $menuHightlightColor;
+.restaurant__menu {
+    padding: 28px 13px 0px 13px;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+        cursor: pointer;
+    }
+
+    @include tabletteVersion {
+        width: 70%;
+        margin: auto;
+    }
+
+    @include desktopVersion {
+        width: 70%;
+        margin: auto;
+    }
 }

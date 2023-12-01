@@ -22,3 +22,42 @@ p{
     font-weight: 300;
     font-size: 1.06rem;
 }
+
+.menu__title {
+    @include restaurants-h1;
+    margin: 0;
+}
+
+.sousmenu__title {
+    @include restaurants-h2;
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    padding-bottom: 5px;
+}
+
+.menuitem {
+    &__title {
+        @include restaurants-h3;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0px;
+        padding-right: 15px;
+    }
+
+    &__texte {
+        @include restaurants-p;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0px;
+        padding-top: 5px;
+        padding-right: 15px;
+    }
+
+    &__price {
+        @include price;
+        padding-top: 5px;
+
+    }
+}

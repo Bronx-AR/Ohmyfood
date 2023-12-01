@@ -1,45 +1,50 @@
-.footer{
-    @include flex-column;
-    justify-content: space-between;
-    gap: 14px;
+footer {
     background-color: #353535;
-    padding: 22px 20px 33px 20px;
-    @include desktopVersion{
-        height: 114px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 71px;
-        padding-right: 125px;
+    color: #ffffff;
+    padding: 22px 0px 15px 25px;
+    @include tabletteVersion {
+        padding-left: 0px;
     }
-    .footer__title{
-        font-family: 'Shrikhand';
-        font-weight: 400;
-        font-size: 18px;
-        color: #FFF;
-    }
-    .footer__content{
-        @include flex-column;
-        gap: 10px;
-        @include desktopVersion {
-            @include flex-row;
-            gap: 40px;
+    .footer__title {
+        @include footer;
+        @include tabletteVersion {
+            text-align: center;
         }
-        .footer__list{
-            .footer__link{
-                @include flex-row;
-                justify-content: flex-start;
-                gap: 11px;
-                color: #FFF;
-                .footer__icon{
-                    width: 11px;
-                    height: 13px;
-                }
-                p{
-                    padding-left: 10px;
-                }
-            }            
+        @include desktopVersion {
+            text-align: right;
+            margin-right: 5rem;
+            padding-top: 20px;
+        }
+    }
+
+    .footer__items {
+        margin-top: 1rem;
+        padding: 0;
+        list-style-type: none;
+        li {
+            padding: 0.3rem;
+        }
+        i {
+            padding-right: 0.6rem;
+            width: 12px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        @include tabletteVersion {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+        }
+        @include desktopVersion {
+            display: flex;
+            justify-content: end;
+            gap: 30px;
+            margin-right: 15rem;
+            margin-top: -27px;
         }
     }
 }

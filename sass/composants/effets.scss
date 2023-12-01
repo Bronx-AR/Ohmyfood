@@ -1,0 +1,109 @@
+@keyframes menudelay {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// Entrées 
+
+.menuitem__1 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 0.2s forwards;
+}
+
+.menuitem__2 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 0.4s forwards;
+}
+
+.menuitem__3 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 0.6s forwards;
+}
+
+.menuitem__10 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 0.8s forwards;
+}
+
+// Plats 
+
+.menuitem__4 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 1s forwards;
+}
+
+.menuitem__5 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 1.2s forwards;
+}
+
+.menuitem__6 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 1.4s forwards;
+}
+
+// Desserts
+
+.menuitem__7 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 1.8s forwards;
+}
+
+.menuitem__8 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 2s forwards;
+}
+
+.menuitem__9 {
+    opacity: 0;
+    animation: menudelay 0.5s ease-in-out 2.2s forwards;
+}
+
+
+// Animation cloche 
+
+.menuitem {
+    position: relative;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__select {
+        background-color: #9356dc;
+        color: #ffffff;
+        font-size: 23px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -0.75rem -4.5rem -0.75rem 1rem;
+        transition: margin-right 750ms ease;
+    }
+
+    &__checkbox:checked~.menuitem__select {
+        margin: -0.75rem -0.75rem -0.75rem 1rem;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    @include desktopVersion {
+        &:hover &__select {
+            margin-right: -0.75rem;
+        }
+    }
+}

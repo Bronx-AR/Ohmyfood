@@ -32,7 +32,6 @@
         }
 
     &:hover{
-        color: $mainButtonColor;
 
         &::after{
             opacity: 1; 
@@ -47,7 +46,7 @@
         left: 0;
         opacity: 0;
         z-index: -1;
-        background-color: $secondaryButtonColor;
+        background-color: #f5edff;
         border-radius: 20px;
     }   
 }

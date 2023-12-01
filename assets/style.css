@@ -61,6 +61,62 @@ p {
   font-size: 1.06rem;
 }
 
+.menu__title {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  color: #101010;
+  margin: 0;
+}
+
+.sousmenu__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 5px;
+}
+
+.menuitem__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0px;
+  padding-right: 15px;
+}
+.menuitem__texte {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17.6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0px;
+  padding-top: 5px;
+  padding-right: 15px;
+}
+.menuitem__price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  padding-top: 5px;
+}
+
 #header {
   width: 100%;
   display: flex;
@@ -72,7 +128,6 @@ p {
 #header .header-logo {
   width: 100%;
   text-align: center;
-  box-shadow: 0px 2px 4px rgb(0, 0, 0);
   z-index: 1;
 }
 #header .header-logo .header__img {
@@ -93,65 +148,137 @@ p {
   right: 18px;
 }
 
-.header-menu .arrow {
-  float: left;
-  margin-top: 15px;
-  padding-left: 17px;
+header .header_logopage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 0px;
+  height: 63px;
 }
-.header-menu .logo {
-  margin-right: 40px;
+@media screen and (min-width: 1024px) {
+  header .header_logopage {
+    height: 96px;
+  }
+}
+header .header_logopage a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+header .header_logopage i {
+  position: absolute;
+  margin-top: -10px;
+  left: 2rem;
+  font-size: 1.5rem;
+}
+header .header_logopage img {
+  width: 162px;
+}
+@media screen and (min-width: 1024px) {
+  header .header_logopage img {
+    width: 200px;
+  }
+}
+header .header_img {
+  object-fit: cover;
+  height: 275px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header_img {
+    height: 400px;
+  }
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 14px;
-  background-color: #353535;
-  padding: 22px 20px 33px 20px;
+.reserved_btn button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  color: #ffffff;
+  box-shadow: 0px 4px 10px rgb(0, 0, 0);
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(-10deg, #9356DC 15%, #FF79DA 100%);
 }
-@media screen and (min-width: 1024px) {
-  .footer {
-    height: 114px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 71px;
-    padding-right: 125px;
+
+.commander .reserved_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.commander .reserved_btn button {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 22px 0px 15px 25px;
+}
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  footer {
+    padding-left: 0px;
   }
 }
-.footer .footer__title {
+footer .footer__title {
   font-family: "Shrikhand";
+  font-style: italic;
   font-weight: 400;
   font-size: 18px;
-  color: #FFF;
+  line-height: 26px;
 }
-.footer .footer__content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media screen and (min-width: 1024px) {
-  .footer .footer__content {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  footer .footer__title {
+    text-align: center;
   }
 }
-.footer .footer__content .footer__list .footer__link {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 11px;
-  color: #FFF;
+@media screen and (min-width: 1024px) {
+  footer .footer__title {
+    text-align: right;
+    margin-right: 5rem;
+    padding-top: 20px;
+  }
 }
-.footer .footer__content .footer__list .footer__link .footer__icon {
-  width: 11px;
-  height: 13px;
+footer .footer__items {
+  margin-top: 1rem;
+  padding: 0;
+  list-style-type: none;
 }
-.footer .footer__content .footer__list .footer__link p {
-  padding-left: 10px;
+footer .footer__items li {
+  padding: 0.3rem;
+}
+footer .footer__items i {
+  padding-right: 0.6rem;
+  width: 12px;
+}
+footer .footer__items a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  line-height: 19px;
+}
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  footer .footer__items {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .footer__items {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    margin-right: 15rem;
+    margin-top: -27px;
+  }
 }
 
 .bienvenue {
@@ -437,9 +564,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-.fonctionnement__card:hover {
-  color: #9356DC;
-}
 .fonctionnement__card:hover::after {
   opacity: 1;
 }
@@ -452,7 +576,7 @@ p {
   left: 0;
   opacity: 0;
   z-index: -1;
-  background-color: #FF79DA;
+  background-color: #f5edff;
   border-radius: 20px;
 }
 
@@ -550,82 +674,201 @@ p {
   border-radius: 0 15px 15px 0;
 }
 
-.menu__wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: flex-start;
-  padding: 32px 0 53px 0;
-  border-radius: 40px 40px 0 0;
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  main {
+    background-color: #ffffff;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    background-color: #ffffff;
+  }
+}
+
+.main__menu {
   background-color: #f6f6f6;
+  border-radius: 40px 40px 0px 0px;
+  width: 100%;
   position: relative;
-  top: -80px;
+  margin-top: -50px;
 }
 @media screen and (min-width: 768px) and (min-width: 1023px) {
-  .menu__wrapper {
+  .main__menu {
     width: 80%;
     margin: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-top: -60px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu__wrapper {
-    width: 70%;
+  .main__menu {
+    width: 80%;
     margin: auto;
-    top: 50px;
+    margin-top: -60px;
   }
 }
-.menu__wrapper h1 {
-  font-size: 1.65rem;
-  padding-left: 0px;
-  margin-bottom: 15px;
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 17px 10px;
+}
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  .menu {
+    width: 50%;
+    margin: auto;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .menu__wrapper .restaurant__card__content {
+  .menu {
+    width: 40%;
+    margin: auto;
     justify-content: center;
     gap: 30px;
   }
 }
-
-.menu-image {
-  width: 100%;
-  height: 275px;
-}
-.menu-image img {
-  width: 100%;
-  height: 275px;
-}
 @media screen and (min-width: 1024px) {
-  .menu-image img {
-    height: 375px;
+  .menu .heart {
+    right: 0.5rem;
   }
 }
 
-.menu-card-wrapper {
+.menuitem {
+  background-color: #ffffff;
+  margin-bottom: 12px;
+  padding: 11px;
+  box-shadow: 0px 4px 15px rgb(0, 0, 0);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 17px;
-  padding-right: 17px;
-  background-color: #f6f6f6;
+  flex-direction: row;
+  align-items: inherit;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.menuitem__list {
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+}
+.menuitem__price {
+  align-self: flex-end;
+}
+
+.restaurant__menu {
+  padding: 28px 13px 0px 13px;
+}
+.restaurant__menu a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) and (min-width: 1023px) {
+  .restaurant__menu {
+    width: 70%;
+    margin: auto;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .menu-card-wrapper {
-    padding-left: 15%;
-    padding-right: 15%;
+  .restaurant__menu {
+    width: 70%;
+    margin: auto;
   }
 }
 
-.course {
-  margin-top: 40px;
-  font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 20px;
-  width: 40px;
-  overflow: visible;
-  padding-bottom: 13px;
-  border-bottom: solid 3px #99E2D0;
+@keyframes menudelay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menuitem__1 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 0.2s forwards;
+}
+
+.menuitem__2 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 0.4s forwards;
+}
+
+.menuitem__3 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 0.6s forwards;
+}
+
+.menuitem__10 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 0.8s forwards;
+}
+
+.menuitem__4 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 1s forwards;
+}
+
+.menuitem__5 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 1.2s forwards;
+}
+
+.menuitem__6 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 1.4s forwards;
+}
+
+.menuitem__7 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 1.8s forwards;
+}
+
+.menuitem__8 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 2s forwards;
+}
+
+.menuitem__9 {
+  opacity: 0;
+  animation: menudelay 0.5s ease-in-out 2.2s forwards;
+}
+
+.menuitem {
+  position: relative;
+}
+.menuitem__checkbox {
+  display: none;
+}
+.menuitem__select {
+  background-color: #9356dc;
+  color: #ffffff;
+  font-size: 23px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -0.75rem -4.5rem -0.75rem 1rem;
+  transition: margin-right 750ms ease;
+}
+.menuitem__checkbox:checked ~ .menuitem__select {
+  margin: -0.75rem -0.75rem -0.75rem 1rem;
+}
+.menuitem__label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .menuitem:hover .menuitem__select {
+    margin-right: -0.75rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
