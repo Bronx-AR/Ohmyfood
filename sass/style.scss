@@ -1,14 +1,18 @@
 @import "./base/generalities.scss";
-@import "./utils/mixins.scss";
-@import "./utils/variables.scss";
 @import "./base/typographie.scss";
-@import "./layout/header.scss";
-@import "./utils/placeholder.scss";
+
 @import "./composants/button.scss";
-@import "./composants/nouveau.scss";
-@import "./layout/footer.scss";
-@import "./pages/acceuil.scss";
-@import "./layout/localisation.scss";
 @import "./composants/card.scss";
-@import "./pages/page_menu.scss";
 @import "./composants/effets.scss";
+@import "./composants/nouveau.scss";
+
+@import "./layout/footer.scss";
+@import "./layout/header.scss";
+@import "./layout/localisation.scss";
+
+@import "./pages/acceuil.scss";
+@import "./pages/page_menu.scss";
+
+@import "./utils/mixins.scss";
+@import "./utils/placeholder.scss";
+@import "./utils/variables.scss"
