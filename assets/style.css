@@ -10,8 +10,6 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   margin: 0px;
-  display: flex;
-  justify-content: center;
 }
 
 * {
@@ -347,7 +345,7 @@ p {
   display: none;
 }
 .menuitem__select {
-  background-color: #9356dc;
+  background-color: #99e2d0;
   color: #ffffff;
   font-size: 23px;
   border-top-right-radius: 15px;
@@ -818,17 +816,34 @@ header .header_img {
     gap: 30px;
   }
 }
-@media screen and (min-width: 1024px) {
-  .menu .heart {
-    right: 0.5rem;
-  }
+.menu .hearts {
+  position: relative;
+}
+.menu .hearts .empty-heart {
+  position: absolute;
+  right: 25px;
+  top: -50px;
+  opacity: 1;
+}
+.menu .hearts .filled-heart {
+  position: absolute;
+  right: 25px;
+  top: -50px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.menu .hearts:hover .empty-heart {
+  opacity: 0;
+}
+.menu .hearts:hover .filled-heart {
+  opacity: 1;
 }
 
 .menuitem {
   background-color: #ffffff;
   margin-bottom: 12px;
   padding: 11px;
-  box-shadow: 0px 4px 15px rgb(0, 0, 0);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   position: relative;
   overflow: hidden;
