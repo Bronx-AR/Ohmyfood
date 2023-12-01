@@ -527,6 +527,47 @@ header .header_img {
   font-size: 1rem;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 1ms 3s forwards;
+}
+.loader__circles {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  animation: flash 0.7s ease-out infinite alternate;
+}
+@keyframes flash {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1333333333);
+    box-shadow: 32px 0 rgba(255, 255, 255, 0.1333333333), -32px #9356dc;
+  }
+  50% {
+    background-color: #ff79da;
+    box-shadow: 32px 0 rgba(255, 255, 255, 0.1333333333), -32px rgba(255, 255, 255, 0.1333333333);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1333333333);
+    box-shadow: 32px 0 #99e2d0, -32px 0 rgba(255, 255, 255, 0.1333333333);
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+
 .bienvenue {
   display: flex;
   flex-direction: column;
