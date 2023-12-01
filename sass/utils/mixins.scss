@@ -62,7 +62,7 @@
     line-height: 26px;
 }
 
-@mixin btn{
+@mixin btn {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -74,6 +74,7 @@
     border: none;
     background: linear-gradient(-10deg, #9356DC 15%, #FF79DA 100%);
 }
+
 @mixin restaurants-h1 {
     font-family: 'Shrikhand';
     font-weight: 400;
@@ -124,4 +125,12 @@
     font-size: 15px;
     line-height: normal;
     text-align: center;
+}
+
+@mixin p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
 }
