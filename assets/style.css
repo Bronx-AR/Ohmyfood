@@ -58,20 +58,21 @@ p {
 
 .menu__title {
   font-family: "Shrikhand";
-  font-style: italic;
   font-weight: 400;
   font-size: 28px;
-  line-height: 41px;
-  color: #101010;
+  font-style: normal;
+  line-height: normal;
+  color: var(--Black, #101010);
   margin: 0;
 }
 
 .sousmenu__title {
+  color: #000;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: normal;
   text-transform: uppercase;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
@@ -79,11 +80,15 @@ p {
 }
 
 .menuitem__title {
+  color: #000;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 21px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -91,11 +96,15 @@ p {
   padding-right: 15px;
 }
 .menuitem__texte {
+  color: #000;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 15px;
-  line-height: 17.6px;
+  font-size: 15.043px;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -104,11 +113,13 @@ p {
   padding-right: 15px;
 }
 .menuitem__price {
+  color: #353535;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
-  line-height: 18px;
+  line-height: normal;
+  text-align: center;
   padding-top: 5px;
 }
 

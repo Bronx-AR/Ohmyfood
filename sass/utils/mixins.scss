@@ -74,45 +74,54 @@
     border: none;
     background: linear-gradient(-10deg, #9356DC 15%, #FF79DA 100%);
 }
-
 @mixin restaurants-h1 {
     font-family: 'Shrikhand';
-    font-style: italic;
     font-weight: 400;
     font-size: 28px;
-    line-height: 41px;
-    color: #101010;
+    font-style: normal;
+    line-height: normal;
+    color: var(--Black, #101010);
 }
 
 @mixin restaurants-h2 {
+    color: #000;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
-    line-height: 19px;
+    line-height: normal;
     text-transform: uppercase;
 }
 
 @mixin restaurants-h3 {
+    color: #000;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 21px;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @mixin restaurants-p {
+    color: #000;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
-    line-height: 17.6px;
+    font-size: 15.043px;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-
 @mixin price {
+    color: #353535;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
-    line-height: 18px;
+    line-height: normal;
+    text-align: center;
 }
