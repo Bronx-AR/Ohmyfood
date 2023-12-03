@@ -128,3 +128,17 @@
     font-size: 16px;
     line-height: normal;
 }
+
+@mixin mainButton{
+    width: 13.6rem;
+    height: 3.13rem;
+    border-radius: 25px;
+    color: white; 
+    border-style: none; 
+}
+
+@mixin btnMainAnimation{
+    background: linear-gradient( lighten(#9356DC, 5) , lighten(#FF79DA,5) );
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: opacity 250ms;
+}

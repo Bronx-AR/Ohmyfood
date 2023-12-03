@@ -19,3 +19,40 @@
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
     }
 }
+
+.btn-main{
+    @include mainButton; 
+    @include cardShadow; 
+    @include mainLinearGradientBackground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; 
+    &:hover{
+        &::after{
+            opacity: 1;
+        }   
+    }
+    /*pseudo-élement qui définit la 2e couche qui s'affichera lors du hover*/
+    &::after {
+        @include btnMainAnimation;
+        @include mainButton;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+/********************************** bouton principal des pages de menu**********************************/
+.btn-commande{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   
+}
