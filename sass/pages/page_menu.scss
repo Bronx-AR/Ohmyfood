@@ -76,3 +76,29 @@
     padding-bottom:13px ;
     border-bottom: solid 3px $menuHightlightColor;
 }
+
+.hearts{
+    position: relative;
+    .empty-heart{
+        position: absolute;
+        right: 25px;
+        top: -50px;
+        opacity: 1;
+    }
+    .filled-heart{
+        position: absolute;
+        right: 25px;
+        top: -50px;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+
+    }
+    &:hover{
+        .empty-heart{
+            opacity: 0;
+        }
+    .filled-heart{
+        opacity: 1;
+        }
+    }
+}

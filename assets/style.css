@@ -903,6 +903,29 @@ header {
   border-bottom: solid 3px #99E2D0;
 }
 
+.hearts {
+  position: relative;
+}
+.hearts .empty-heart {
+  position: absolute;
+  right: 25px;
+  top: -50px;
+  opacity: 1;
+}
+.hearts .filled-heart {
+  position: absolute;
+  right: 25px;
+  top: -50px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.hearts:hover .empty-heart {
+  opacity: 0;
+}
+.hearts:hover .filled-heart {
+  opacity: 1;
+}
+
 /* Media queries desktop */
 /* Media queries tablette */
 /* Shadow & Radius */
