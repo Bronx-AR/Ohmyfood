@@ -1,14 +1,9 @@
-.footer-index{
-    margin-top: -80px;
-}
-
 footer{
     width: 100%;
     background-color: #353535;
     color:$footerTextColor;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: -80px;
 
     @include desktopVersion{
         margin-top: 50px;    
