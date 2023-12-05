@@ -3,7 +3,12 @@
 @import "../utils/placeholder.scss";
 
 .wrapper{
-    max-width: 144Opx;
+    max-width: 1440px;
+    @include desktopVersion{
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+    }
 }
 
 body{
@@ -11,6 +16,8 @@ body{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 *{

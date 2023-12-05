@@ -42,12 +42,6 @@
     flex-direction: column;
     gap: 25px;
 
-    h2{
-        @include tabletteVersion{
-            text-align: center;
-        }
-    }
-
     @include desktopVersion{
         padding-left: 10%;
         padding-right: 10%;
@@ -72,16 +66,10 @@
 
 .restaurants{
     background-color: #F7F7F7;
-    padding: 20px 10% 20px 10%;
+    padding: 20px 20px 20px 20px;
     @include desktopVersion{
         width: 100%;
-    }
-    .restaurants_container {
-        @include desktopVersion{
-            width: 100%;
-            max-width: 1440px;
-            margin: auto;
-        }
+        padding: 20px 10% 20px 10%;
     }
     .restaurants_title{
         padding-bottom: 25px;
@@ -106,6 +94,7 @@
             flex-wrap: wrap;
             row-gap: 50px;
             column-gap: 100px;
+            justify-content: space-between;
         }
         .cards__card{
             position: relative;
@@ -152,10 +141,7 @@
                     transition: opacity .5s ease-in-out;
 
                 }
-                &:hover{
-                    .empty-heart{
-                        opacity: 0;
-                    }
+                
                 .filled-heart{
                     opacity: 1;
                     }
@@ -167,4 +153,3 @@
     .nouveau::after{
         @include nouveau;
     }
-}
