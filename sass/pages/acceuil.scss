@@ -71,6 +71,13 @@
         width: 100%;
         padding: 20px 10% 20px 10%;
     }
+    .restaurants_container{
+        @include desktopVersion{
+            width: 100%;
+            max-width: 1440px;
+            margin: auto;
+        }
+    }
     .restaurants_title{
         padding-bottom: 25px;
         @include tabletteVersion{

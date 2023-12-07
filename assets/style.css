@@ -713,6 +713,13 @@ header {
     padding: 20px 10% 20px 10%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .restaurants .restaurants_container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 .restaurants .restaurants_title {
   padding-bottom: 25px;
 }
