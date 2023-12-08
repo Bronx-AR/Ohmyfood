@@ -139,6 +139,9 @@
                     right: 25px;
                     top: -50px;
                     opacity: 1;
+                    @include desktopVersion{
+                        top: -9px;
+                    }
                 }
                 .filled-heart{
                     position: absolute;
@@ -146,13 +149,20 @@
                     top: -50px;
                     opacity: 0;
                     transition: opacity .5s ease-in-out;
-
+                    @include desktopVersion{
+                        top: -9px;
+                    }
+            
                 }
-                
+                &:hover{
+                    .empty-heart{
+                        opacity: 0;
+                    }
                 .filled-heart{
                     opacity: 1;
                     }
                 }
+            }
             }                   
         }
     }  

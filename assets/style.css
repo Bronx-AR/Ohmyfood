@@ -801,6 +801,11 @@ header {
   top: -50px;
   opacity: 1;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants .cards .cards__card .hearts .empty-heart {
+    top: -9px;
+  }
+}
 .restaurants .cards .cards__card .hearts .filled-heart {
   position: absolute;
   right: 25px;
@@ -808,7 +813,15 @@ header {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-.restaurants .cards .cards__card .hearts .filled-heart {
+@media screen and (min-width: 1024px) {
+  .restaurants .cards .cards__card .hearts .filled-heart {
+    top: -9px;
+  }
+}
+.restaurants .cards .cards__card .hearts:hover .empty-heart {
+  opacity: 0;
+}
+.restaurants .cards .cards__card .hearts:hover .filled-heart {
   opacity: 1;
 }
 
@@ -873,7 +886,7 @@ header {
   .menu__wrapper .restaurant__card__content {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
   }
 }
@@ -955,5 +968,13 @@ header {
 /* Media queries desktop */
 /* Media queries tablette */
 /* Shadow & Radius */
+@keyframes animationMenu {
+  0% {
+    transform: translateY(1999px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
