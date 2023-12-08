@@ -142,3 +142,18 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: opacity 250ms;
 }
+
+@mixin nouveau{
+    content: "Nouveau";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: $etiquetteFontColor;
+    background-color: $etiquetteBackgroundColor;
+    padding: 7px 10px;
+    border-radius: 2px;
+    z-index: 2;
+    pointer-events: none;
+}
