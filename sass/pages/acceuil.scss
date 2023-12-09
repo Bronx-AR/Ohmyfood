@@ -123,33 +123,45 @@
                     width: 100%;
                     object-fit: cover;
                 }
-                .card__txt{
-                    height: 30%;
-                    color: #000;
-                }
-            }
-            .hearts{
-                position: relative;
-                .empty-heart{
-                    position: absolute;
-                    right: 25px;
-                    top: -50px;
-                    opacity: 1;
-                }
-                .filled-heart{
-                    position: absolute;
-                    right: 25px;
-                    top: -50px;
-                    opacity: 0;
-                    transition: opacity .5s ease-in-out;
-            
-                }
-                &:hover{
-                    .empty-heart{
-                        opacity: 0;
+                &__content{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 13px;
+                    padding-right: 25px;
+                    & h3{  
+                        margin-top: 10px;
+                        margin-bottom: 10px;
                     }
-                .filled-heart{
-                    opacity: 1;
+            
+                    & p{
+                        margin-top: 0px;
+                        
+                    }
+                    .hearts{
+                        position: relative;
+                        .empty-heart{
+                            position: absolute;
+                            right: 25px;
+                            top: -50px;
+                            opacity: 1;
+                        }
+                        .filled-heart{
+                            position: absolute;
+                            right: 25px;
+                            top: -50px;
+                            opacity: 0;
+                            transition: opacity .5s ease-in-out;
+                    
+                        }
+                        &:hover{
+                            .empty-heart{
+                                opacity: 0;
+                            }
+                        .filled-heart{
+                            opacity: 1;
+                            }
+                        }
                     }
                 }
             }
