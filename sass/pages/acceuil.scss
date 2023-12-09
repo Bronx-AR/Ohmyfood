@@ -107,9 +107,11 @@
             position: relative;
             @include tabletteVersion{
                 width: 45%;
+                position: relative;
             }
             @include desktopVersion{
                 width: 43%;
+                position: relative;
             }
             .card__link{
                 width: 100%;
@@ -138,37 +140,40 @@
                         margin-top: 0px;
                         
                     }
-                    .hearts{
-                        position: relative;
-                        .empty-heart{
-                            position: absolute;
-                            right: 25px;
-                            top: -15px;
-                            opacity: 1;
-                        }
-                        .filled-heart{
-                            position: absolute;
-                            right: 25px;
-                            top: -15px;
-                            opacity: 0;
-                            transition: opacity .5s ease-in-out;
-                    
-                        }
-                        &:hover{
-                            .empty-heart{
-                                opacity: 0;
-                            }
-                        .filled-heart{
-                            opacity: 1;
-                            }
-                        }
-                    }
                 }
             }
             }                   
         }
     }  
-    
+
     .nouveau::after{
         @include nouveau;
+    }
+
+    .hearts{
+        position: absolute;
+        right: 20px;
+        bottom: 40px;
+        .empty-heart{
+            position: absolute;
+            right: 25px;
+            top: -15px;
+            opacity: 1;
+        }
+        .filled-heart{
+            position: absolute;
+            right: 25px;
+            top: -15px;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+    
+        }
+        &:hover{
+            .empty-heart{
+                opacity: 0;
+            }
+        .filled-heart{
+            opacity: 1;
+            }
+        }
     }

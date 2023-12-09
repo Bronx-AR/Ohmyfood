@@ -4,6 +4,7 @@
 /* Shadow & Radius */
 .wrapper {
   max-width: 1440px;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .wrapper {
@@ -425,11 +426,6 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-@media screen and (min-width: 1024px) {
-  footer {
-    margin-top: 50px;
-  }
-}
 footer .footer__wrapper {
   width: 100%;
   padding-left: 25px;
@@ -763,11 +759,13 @@ header {
 @media screen and (min-width: 768px) and (min-width: 1023px) {
   .restaurants .cards .cards__card {
     width: 45%;
+    position: relative;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurants .cards .cards__card {
     width: 43%;
+    position: relative;
   }
 }
 .restaurants .cards .cards__card .card__link {
@@ -798,28 +796,6 @@ header {
 .restaurants .cards .cards__card .card__link .card__content p {
   margin-top: 0px;
 }
-.restaurants .cards .cards__card .card__link .card__content .hearts {
-  position: relative;
-}
-.restaurants .cards .cards__card .card__link .card__content .hearts .empty-heart {
-  position: absolute;
-  right: 25px;
-  top: -15px;
-  opacity: 1;
-}
-.restaurants .cards .cards__card .card__link .card__content .hearts .filled-heart {
-  position: absolute;
-  right: 25px;
-  top: -15px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-.restaurants .cards .cards__card .card__link .card__content .hearts:hover .empty-heart {
-  opacity: 0;
-}
-.restaurants .cards .cards__card .card__link .card__content .hearts:hover .filled-heart {
-  opacity: 1;
-}
 
 .nouveau::after {
   content: "Nouveau";
@@ -833,6 +809,31 @@ header {
   padding: 7px 10px;
   border-radius: 2px;
   z-index: 2;
+}
+
+.hearts {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+}
+.hearts .empty-heart {
+  position: absolute;
+  right: 25px;
+  top: -15px;
+  opacity: 1;
+}
+.hearts .filled-heart {
+  position: absolute;
+  right: 25px;
+  top: -15px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.hearts:hover .empty-heart {
+  opacity: 0;
+}
+.hearts:hover .filled-heart {
+  opacity: 1;
 }
 
 /********************************* page Menu *********************************/
@@ -875,7 +876,7 @@ header {
     align-items: center;
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 80x;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1023px) {
@@ -883,7 +884,7 @@ header {
     align-items: center;
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 80px;
   }
 }
 
@@ -928,21 +929,21 @@ header {
   border-bottom: solid 3px #99E2D0;
 }
 
-.hearts {
+.hearts_restaurant {
   position: relative;
 }
-.hearts .empty-heart {
+.hearts_restaurant .empty-heart {
   position: absolute;
   right: 25px;
   top: -50px;
   opacity: 1;
 }
 @media screen and (min-width: 1024px) {
-  .hearts .empty-heart {
+  .hearts_restaurant .empty-heart {
     top: -9px;
   }
 }
-.hearts .filled-heart {
+.hearts_restaurant .filled-heart {
   position: absolute;
   right: 25px;
   top: -50px;
@@ -950,14 +951,14 @@ header {
   transition: opacity 0.5s ease-in-out;
 }
 @media screen and (min-width: 1024px) {
-  .hearts .filled-heart {
+  .hearts_restaurant .filled-heart {
     top: -9px;
   }
 }
-.hearts:hover .empty-heart {
+.hearts_restaurant:hover .empty-heart {
   opacity: 0;
 }
-.hearts:hover .filled-heart {
+.hearts_restaurant:hover .filled-heart {
   opacity: 1;
 }
 

@@ -4,10 +4,6 @@ footer{
     color:$footerTextColor;
     padding-top: 30px;
     padding-bottom: 30px;
-
-    @include desktopVersion{
-        margin-top: 50px;    
-    }
    
     .footer__wrapper{
         width: 100%;

@@ -4,6 +4,7 @@
 
 .wrapper{
     max-width: 1440px;
+    width: 100%;
     @include desktopVersion{
         width: 100%;
         max-width: 1440px;
