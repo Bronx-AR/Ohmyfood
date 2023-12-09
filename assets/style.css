@@ -804,13 +804,13 @@ header {
 .restaurants .cards .cards__card .card__link .card__content .hearts .empty-heart {
   position: absolute;
   right: 25px;
-  top: -50px;
+  top: -15px;
   opacity: 1;
 }
 .restaurants .cards .cards__card .card__link .card__content .hearts .filled-heart {
   position: absolute;
   right: 25px;
-  top: -50px;
+  top: -15px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
