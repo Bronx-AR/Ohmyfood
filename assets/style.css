@@ -58,7 +58,7 @@ h2 {
 
 h3 {
   font-size: 1.12rem;
-  font-style: 700;
+  font-weight: 700;
 }
 
 p {
@@ -787,10 +787,6 @@ header {
 .restaurants .cards .cards__card .card__link .card__txt {
   height: 30%;
   color: #000;
-  padding: 14px 13px;
-}
-.restaurants .cards .cards__card .card__link .card__txt .card__title {
-  padding-bottom: 5px;
 }
 .restaurants .cards .cards__card .hearts {
   position: relative;
@@ -827,7 +823,6 @@ header {
   padding: 7px 10px;
   border-radius: 2px;
   z-index: 2;
-  pointer-events: none;
 }
 
 /********************************* page Menu *********************************/
