@@ -556,7 +556,7 @@ header {
   border-style: none;
   background-color: #D2D2D2;
 }
-.localisation form input::focus {
+.localisation form input:focus {
   outline: none;
 }
 .localisation form ::placeholder {
@@ -588,15 +588,15 @@ header {
 @keyframes flash {
   0% {
     background-color: rgba(255, 255, 255, 0.1333333333);
-    box-shadow: 32px 0 rgba(255, 255, 255, 0.1333333333), -32px #9356dc;
+    box-shadow: 32px 0 0 0 rgba(255, 255, 255, 0.1333333333), -32px 0 0 0 #9356dc;
   }
   50% {
     background-color: #ff79da;
-    box-shadow: 32px 0 rgba(255, 255, 255, 0.1333333333), -32px rgba(255, 255, 255, 0.1333333333);
+    box-shadow: 32px 0 0 0 rgba(255, 255, 255, 0.1333333333), -32px 0 0 0 rgba(255, 255, 255, 0.1333333333);
   }
   100% {
     background-color: rgba(255, 255, 255, 0.1333333333);
-    box-shadow: 32px 0 #99e2d0, -32px 0 rgba(255, 255, 255, 0.1333333333);
+    box-shadow: 32px 0 0 0 #99e2d0, -32px 0 0 0 rgba(255, 255, 255, 0.1333333333);
   }
 }
 @keyframes disappear {
@@ -875,7 +875,7 @@ header {
     align-items: center;
     display: flex;
     justify-content: center;
-    gap: 80x;
+    gap: 80px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1023px) {
